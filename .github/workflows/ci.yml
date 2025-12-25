@@ -20,4 +20,4 @@ jobs:
               run: node --version
 
             - name: "Clone the repository"
-              uses: actions/checkout@v2.1
+              uses: actions/checkout@v2
