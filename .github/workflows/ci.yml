@@ -12,9 +12,9 @@ jobs:
 
         steps:
             - name: "Setup Node JS"
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v3
               with:
-                node-version: "21"
+                node-version: "20"
 
             - name: "Chack node version"
               run: node --version
