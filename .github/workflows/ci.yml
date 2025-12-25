@@ -32,7 +32,7 @@ jobs:
               run: npm test
 
             - name: "Run build"
-              run: npm run bulid
+              run: npm run build
             
             - name: "List directories"
               run: ls
