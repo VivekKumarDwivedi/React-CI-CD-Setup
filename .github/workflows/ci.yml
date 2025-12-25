@@ -15,5 +15,9 @@ jobs:
               uses: actions/setup-node@v6
               with:
                 node-version: "16"
+
             - name: "Chack node version"
               run: node --version
+
+            - name: "Clone the repository"
+              uses: actions/checkout@v2
