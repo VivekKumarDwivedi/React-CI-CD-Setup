@@ -1,0 +1,17 @@
+name: "Sample React CI Pipeline / workflow"
+
+on:
+    push:
+        branches:
+            - main
+            - VD
+
+jobs:
+    bulid-and-test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: "Setup Node JS"
+              uses: actions/setup-node@v6
+              with:
+                node-version: "16"
