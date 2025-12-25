@@ -3,9 +3,10 @@ import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import { defineConfig, globalIgnores } from 'eslint/config'
+import react from "eslint-plugin-react";
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(['dist','src/__tests__']),
   {
     files: ['**/*.{js,jsx}'],
     extends: [
@@ -22,8 +23,14 @@ export default defineConfig([
         sourceType: 'module',
       },
     },
+    plugins: {
+       react,
+       'react-hooks':reactHooks,
+      //  'react-refresh': reactRefresh,
+    },
     rules: {
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      "react/react-in-jsx-scope": "off"
     },
   },
 ])
